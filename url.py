@@ -16,7 +16,7 @@ def configurar_driver():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     # Descomenta esta línea si deseas que no se abra la interfaz gráfica
-    # options.add_argument("--headless")
+    options.add_argument("--headless")
 
     service = Service(ChromeDriverManager().install())
     return webdriver.Chrome(service=service, options=options)
